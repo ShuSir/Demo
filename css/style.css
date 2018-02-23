@@ -1,0 +1,30 @@
+h1 {
+    font: 200% arial, sans-serif;
+    text-align: center;
+    color: #61a0a8;
+    font-weight: bold;
+    }
+
+body {
+    background: #333;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 20px;
+    margin-left: 80px;
+    alignment-baseline: central;
+    }
+
+#disclaimer{
+    font: 100% arial, sans-serif;
+    text-align: center;
+    color: #f49f42;
+    margin-bottom: 10px;
+}
+
+#note{
+    font: 80% arial, sans-serif;
+    text-align: left;
+    color: #f49f42;
+    }
+
+/*['#dd6b66','#759aa0','#e69d87','#8dc1a9','#ea7e53','#eedd78','#73a373','#73b9bc','#7289ab', '#91ca8c','#f49f42']?;*/

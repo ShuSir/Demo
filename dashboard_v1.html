@@ -1,0 +1,93 @@
+DOCTYPE html>
+<html>
+<head>
+    <title>Auto</title>
+</head>
+<body>
+    <body style="background-color:#FEFEFB;">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <h1>Automobile Dashboard</h1>
+    <script src="lib/d3.js"></script>
+    <script src="lib/crossfilter.js"></script>
+    <script src="lib/dc.js"></script>
+    <link rel="stylesheet" href="https://cdn.anychart.com/releases/8.0.1/css/anychart-ui.min.css" />
+    <script>
+        //define margin
+            var margin = {top: 20, right: 20, bottom: 150, left: 60},
+            width = 700 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+
+            // define svg
+            var svg = d3.select("body").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform","translate(" + margin.left + "," + margin.top + ")");
+            // define the x y scale
+            var x = d3.scale.ordinal().rangeRoundBands([0, width],0.2,0.2);
+            var y = d3.scale.linear().range([height, 0]);
+
+            // define the x y axis
+            var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom")
+
+            var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+
+            // import data
+            d3.csv("data/Brand.csv", function(error, data) {
+            if(error) console.log("Error: data not loaded")
+
+            data.forEach(function(d) {
+            d['2017 YTD']= +d['2017 YTD'];
+            d['Auto Brand']=d['Auto Brand'];
+            console.log(d['2017 YTD']);
+            });
+
+            data.sort(function(a,b){
+            return b['2017 YTD']-a['2017 YTD'];
+            });
+
+            // specify the domain of x and y scale
+            x.domain(data.map(function(d) { return d['Auto Brand']; }));
+            y.domain([0, d3.max(data, function(d) { return d['2017 YTD']; })]);
+
+
+            svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis)
+            .selectAll("text")
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", "-.55em")
+            .attr("transform", "rotate(-90)" );
+
+            svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+            .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .text("Number of Cars");
+
+            svg.selectAll("bar")
+            .data(data)
+            .enter().append("rect")
+            .style("fill", "steelblue")
+            .attr("x", function(d) { return x(d['Auto Brand']); })
+            .attr("width", x.rangeBand())
+            .attr("y", function(d) { return y(d['2017 YTD']); })
+            .attr("height", function(d) { return height - y(d['2017 YTD']); })
+});
+    </script>
+
+</body>
+</html>
+
+
