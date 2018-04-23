@@ -1,4 +1,4 @@
-The works in this repo are to demonstrate skill sets in the area of data acquisition (web crawling), cleaning/preprocessing (Python/R), storage/query (SQL), analysis, as well as visualization (JavaScript).<br>
+The works in this repo are to demonstrate skill sets in the area of data acquisition (web crawling), cleaning/preprocessing (Python/R), storage/query (SQL), data analysis, machine learning, and visualization (JavaScript).<br>
 <br>
 To showcase the skillsets in each area, I crawled some data sets related to automotive industry and did basic analysis of the datasets.
 The statistics cover three aspects of the automotive industry:<br>
@@ -11,6 +11,5 @@ https://shusir.github.io/Demo/Dashboard.html<br>
 <br>
 Some basic analysis in R on point II is available at:<br> 
 http://rpubs.com/ShuSir/resale_car_analysis<br>
-
-In addtion, to showcase the skill set in machine learning, a mini-project on SG private housing prediction is developed based on URA public data. The report is available at:<br> 
+A mini-project on SG private housing prediction is developed based on URA public data. The report is available at:<br> 
 https://shusir.github.io/Demo/condo_prediction.html
