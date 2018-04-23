@@ -1,4 +1,4 @@
-The works in this repo are to demonstrate skill sets in the area of data acquisition (web crawler), cleaning/preprocessing (Python/R), storage/query (SQL), analysis, as well as visualization (JavaScript).<br>
+The works in this repo are to demonstrate skill sets in the area of data acquisition (web crawling), cleaning/preprocessing (Python/R), storage/query (SQL), analysis, as well as visualization (JavaScript).<br>
 <br>
 To showcase the skillsets in each area, I crawled some data sets related to automotive industry and did basic analysis of the datasets.
 The statistics cover three aspects of the automotive industry:<br>
