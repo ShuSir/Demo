@@ -11,5 +11,6 @@ https://shusir.github.io/Demo/Dashboard.html<br>
 <br>
 Some basic analysis in R on point II is available at:<br> 
 http://rpubs.com/ShuSir/resale_car_analysis<br>
+
 A mini-project on SG private housing prediction is developed based on URA public data. The report is available at:<br> 
 https://shusir.github.io/Demo/condo_prediction.html
